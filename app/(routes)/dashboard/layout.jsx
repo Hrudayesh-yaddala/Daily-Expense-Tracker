@@ -7,7 +7,7 @@ import { Budgets } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
 import { eq } from 'drizzle-orm'
 import { useRouter } from 'next/navigation'
-
+import Nav from './_components/Nav'
 function DashboardLayout({children}) {
 
   const {user}=useUser();
@@ -28,11 +28,13 @@ function DashboardLayout({children}) {
   }
   return (
     <div>
-        <div className='fixed md:w-64 hidden md:block '>
+        {/* <div className='fixed md:w-64 hidden md:block '>
             <SideNav/>
-        </div>
-        <div className='md:ml-64 '>
-          <DashboardHeader/>
+        </div> */}
+      
+        {/* <DashboardHeader/> */}
+        <Nav/>
+        <div className='mt-16'>
         {children}
         </div>
         </div>
