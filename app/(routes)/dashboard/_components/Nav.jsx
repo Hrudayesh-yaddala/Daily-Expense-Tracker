@@ -15,11 +15,11 @@ function Nav() {
     <div>
       <nav className=" fixed w-full z-20 top-0 start-0 bg-black/90 backdrop-blur-3xl ">
         <div className=" min-w-full flex flex-wrap items-center justify-between mx-auto px-10 py-4">
-          <div className="flex items-start space-x-3 ">
-        
-          <SiWebmoney className=' text-white  w-8 h-8' />
+          <Link className="flex items-start space-x-3 " href={'/dashboard'}>
+
+            <SiWebmoney className=' text-white  w-8 h-8' />
             <span className="self-center text-2xl font-semibold text-white ">SpendSage</span>
-          </div>
+          </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <UserButton afterSignOutUrl='/' />
             <button
@@ -36,7 +36,7 @@ function Nav() {
               </svg>
             </button>
           </div>
-          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isMenuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
+          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1  ${isMenuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal border border-gray-100 rounded-lg md:space-x-10  md:flex-row md:mt-0 md:border-0  ">
               <li>
                 <Link href={'/dashboard'} className="block py-2 px-3 hover:text-white  rounded md:bg-transparent text-zinc-300 md:p-0 ">Home</Link>
