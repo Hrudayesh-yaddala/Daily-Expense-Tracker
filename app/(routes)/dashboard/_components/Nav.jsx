@@ -15,11 +15,11 @@ function Nav() {
     <div>
       <nav className=" fixed w-full z-20 top-0 start-0 bg-black/90 backdrop-blur-3xl ">
         <div className=" min-w-full flex flex-wrap items-center justify-between mx-auto px-10 py-4">
-          <div className="flex items-start space-x-3 ">
-        
-          <SiWebmoney className=' text-white  w-8 h-8' />
+          <Link className="flex items-start space-x-3 " href={'/dashboard'}>
+
+            <SiWebmoney className=' text-white  w-8 h-8' />
             <span className="self-center text-2xl font-semibold text-white ">SpendSage</span>
-          </div>
+          </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <UserButton afterSignOutUrl='/' />
             <button

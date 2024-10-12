@@ -1,44 +1,26 @@
-import React from 'react'
-import Image from "next/image";
 
-function Hero() {
+import React from "react";
+import { Spotlight } from "@/components/ui/spotlight";
+
+const Hero = () => {
   return (
-    <section className="bg-gray-50 flex items-center flex-col">
-  <div className="mx-auto max-w-screen-xl px-4 py-32 
-  lg:flex">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-      Manager Your Expense
-        <strong className="font-extrabold text-primary sm:block"> Control your Money
-</strong>
-      </h1>
-
-      <p className="mt-4 sm:text-xl/relaxed">
-      Start Creating your budget and save ton of money
-
-
-      </p>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded bg-primary px-12 py-3
-           text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="/sign-in"
-        >
-          Get Started
-        </a>
-
-      
+    <div
+      className=" h-screen w-full  flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+        <h1
+          className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Spotlight <br /> is the new trend.
+        </h1>
+        <p
+          className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+          Spotlight effect is a great way to draw attention to a specific part
+          of the page. Here, we are drawing the attention towards the text
+          section of the page. I don&apos;t know why but I&apos;m running out of
+          copy.
+        </p>
       </div>
-    </div>
-  </div>
-  <Image src='/dashboard2.png' alt='dashboard'
-  width={1000}
-  height={700}
-  className='-mt-9 rounded-xl border-2'
-  />
-</section>
-  )
-}
+    </div>)
 
-export default Hero
+}
+export default Hero;
